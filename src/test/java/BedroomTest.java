@@ -12,8 +12,8 @@ public class BedroomTest {
 
     @Before
     public void before(){
-        bedroom1 = new Bedroom(1, 2, "double");
-        bedroom2 = new Bedroom(2, 1, "single");
+        bedroom1 = new Bedroom(1, 2, "double", 2000);
+        bedroom2 = new Bedroom(2, 1, "single", 4000);
         guest1 = new Guest("Bob");
         guest2 = new Guest("Jim");
     }
@@ -31,6 +31,11 @@ public class BedroomTest {
     @Test
     public void bedroomHasType() {
         assertEquals("double", bedroom1.getType());
+    }
+
+    @Test
+    public void bedroomHasNightlyRate() {
+        assertEquals(2000, bedroom1.getNightlyRate());
     }
 
     @Test
